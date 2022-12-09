@@ -1,6 +1,7 @@
 package com.blz;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class LineComparison {
     public static void main(String[] args) {
@@ -34,11 +35,11 @@ public class LineComparison {
         Double lengthTwo = Math.sqrt((x4 - x3) ^ 2 + (y4 - y3) ^ 2);
         System.out.println("Length of a line is " + lengthTwo);
 
-        if (lengthOne.equals(lengthTwo)) {
-            System.out.println("Both Lines Are Equal");
-        }
-        else {
-            System.out.println("Both Line Are Not Equal");
+        if(lengthOne.compareTo(lengthTwo) == 1)
+            System.out.println("Length of Line 1 is GREATER than Line 2 ");
+        else if (lengthOne.compareTo(lengthTwo) == -1)
+            System.out.println("Length of Line 1 is LESS than Line 2 ");
+        else
+            System.out.println("Both lines are EQUAL in length");
         }
     }
-}
